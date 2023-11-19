@@ -1,0 +1,346 @@
+1. What is React?
+
+      * React is a JavaScript library created by Facebook.
+
+	* React is a User Interface (UI) library.
+
+	* React is a tool for building UI components.
+
+2. What are the advantages of using React?
+
+	 1 Effortless Maintenance.
+       2 Fast Rendering.
+       3 Search Engine Friendly.
+       4 Reliable Development Tools.
+       5 Redux Facility.
+       6 Offers Mobile Application Development.
+       7 Stable and Streamline Code.
+       8 Ample Community Support.
+
+3. What is JSX?
+
+	*JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React.
+
+4. What are keys in React?
+
+	*In React, keys are like a Special String attribute that is included in the Creation of List of Elements.
+            Keys play a great significance in React, and they help us to know what are the items in the given list of elements that have changed or are updated or removed.
+
+5. What is React-Components?
+
+	*Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+6. What is classComponent and functionalComponent differnce?
+
+  Functional Component :
+	
+	1 A functional component is just a plain JavaScript pure function that accepts props as an argument and returns a React element(JSX).
+	2 There is no render method used in functional components.
+	3 Functional components run from top to bottom and once the function is returned it can’t be kept alive.
+	4 Also known as Stateless components as they simply accept data and display them in some form, they are mainly responsible for rendering UI.
+	5 React lifecycle methods (for example, componentDidMount) cannot be used in functional components.
+	6 Constructors are not used.
+ 
+  Class Component :
+
+	1 A class component requires you to extend from React. Component and create a render function that returns a React element.
+	2 It must have the render() method returning JSX (which is syntactically similar to HTML)
+	3 The class component is instantiated and different life cycle method is kept alive and is run and invoked depending on the phase of the class 	   component.
+	4 Also known as Stateful components because they implement logic and state.
+	5 React lifecycle methods can be used inside class components (for example, componentDidMount).
+	6 Constructor is used as it needs to store state. 
+
+8. What is Constructor?
+
+	*A constructor is a special method of a class or structure in object-oriented programming that initializes a newly created object of that type. Whenever an object is created, the constructor is called automatically.
+
+9. What is super keyword?
+
+	*A super keyword in Java is a keyword that allows access to the superclass or parent class of an object. It can also call superclass methods and access superclass variables.
+
+10. what is render function?
+
+	*React renders HTML to the web page by using a function called render(). The purpose of the function is to display the specified HTML code inside the specified HTML element. In the render() method, we can read props and state and return our JSX code to the root component of our app.
+
+11. How to change of state value?
+
+	*To change a value in the state object, use the this. setState() method. When a value in the state object changes, the component will re-render, meaning that the output will change according to the new value(s).
+
+12. What is use of Life Cyle Methods?
+
+	*In React, components have a lifecycle that consists of different phases. Each phase has a set of lifecycle methods that are called at specific points in the component's lifecycle. These methods allow you to control the component's behavior and perform specific actions at different stages of its lifecycle.
+
+13. List of Life Cycle Methods?
+
+	There are three types of lifecycle methods: 
+
+		* mounting 
+		* updating
+		* unmounting 
+
+14. What is use of useEffect?
+
+	*The useEffect Hook allows you to perform side effects in your components. Some examples of side effects are: fetching data, directly updating the DOM, and timers. useEffect accepts two arguments. The second argument is optional.
+
+15. What are props in React?
+
+	*In ReactJS, the props are a type of object where the value of attributes of a tag is stored. The word “props” implies “properties”, and its working functionality is quite similar to HTML attributes. Basically, these props components are read-only components.
+
+16. What is prop drilling in React?
+
+	*In the React ecosystem, it's common to divide an application into multiple components to make it more modular and reusable. As the component hierarchy grows, the challenge of passing data and state between components that are not directly nested arises, known as “prop drilling”.
+
+17. What is React Hooks?
+
+	*Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+
+18. What is React Hooks list?
+
+	* useState
+	* useEffect
+	* useSelector
+	* useDispatch
+	* useReducer
+	* useContext
+	* useParams
+	* useSearchparams
+
+19. What are the different ways to style a React component?
+
+	inline style:
+	
+		<h1 style={{color:"green"}}>Hi</h1>
+
+	internal style:
+	
+		let col={
+		  	  color:"red"
+			}
+		<h1 style={col}>Hi</h1>
+
+	external style:
+	
+	import './Home.css'
+		.size{
+		       color:"green"
+		     }
+     	<h1 className>hello</h1>
+
+20. How do you handle events in React?
+
+	*We can handle events by passing a function as a prop to an element like <button> . Event handlers must be passed, not called! onClick={handleClick} , not onClick={handleClick()} . We can define an event handler function separately or inline.
+
+21. How can you update the State of a component?
+
+		Class Component :
+ 
+	class Home extends React.Component{
+		constructor(){
+		  super()
+		this.state={
+			     name:"react"	
+			   }
+		}
+	const handle=()=>{
+			this.setstate({name:"react js"})
+		}
+	  render(){
+		return(
+			<div>
+			   <h1>{this.state.name}</h1>
+			   <button onClick={handle}>Click</button>
+			</div>
+		       )
+   		  }
+		}
+	export default Home
+        
+                Functional Component
+
+	import {useState} from 'react'
+	const Home =()=>{
+		const [name.setName]=useState("react")
+		
+	  return(
+                  <div>
+                     <h1>{name}</h1>
+		     <button onClick={()=>setName("react js")}>
+		  </div>
+		)
+	    }
+	export default Home
+
+22. What is React Router?
+
+	*React Router is a JavaScript framework that lets us handle client and server-side routing in React applications. It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. It also allows us to use browser history features while preserving the right application view.
+
+23. How to use of BrowserRouter?
+	
+	import Hello from './Hello.js'
+	import {BrowserRouting,Routes,Route} from 'react-router-dom'
+	const Routing =()=>{
+		return(
+			<BrowserRouter>
+			<Routes>
+			<Route path="/" elements={<Hello/>} />
+			</Routes>
+			</BrowserRouter>
+		     )
+	}
+	export default Routing
+
+24. How to use of Routes & Links?
+
+	*<Link> is used to set the URL and keep track of browsing history. Anytime we link to an internal path, we will use <Link> instead of <a href=""> . The "layout route" is a shared component that inserts common content on all pages, such as a navigation menu.
+
+25. What is use of useParams & useSearchParams?
+
+	*useParams, returns an object containing the current route's filled in dynamic parameters. useSearchParams, returns a read-only version of the URLSearchParams interface, which includes utility methods for reading the URL's query string.
+
+26. What is React context? How to createContext?
+
+	*React Context is a method to pass props from parent to child component(s), by storing the props in a store(similar in Redux) and using these props from the store by child component(s) without actually passing them manually at each level of the component tree.
+
+	import {createContext} from 'react'
+	export const globalstate=createContext()
+
+27. What is use of Provider & dispatch method?
+	
+	*The <Provider> component makes the Redux store available to any nested components that need to access the Redux store. Since any React component in a React Redux app can be connected to the store, most applications will render a <Provider> at the top level, with the entire app's component tree inside of it.
+
+	Dispatch Methods are the load balancing algorithms that determine how client requests are distributed between servers in a farm. AppDirector receives requests for service from clients and decides to which server to direct each request.
+
+28. What is Read in Context values?
+
+	Contexts of reading are all the elements that influence how we read in different situations. The context includes:
+
+			 * the setting
+			 * the text 
+			 * the purpose for reading.
+
+29. How we can pass props from Child to Parent?
+
+	Functional Component:
+	
+ parent.js
+
+	import React from "react";
+	import Child from "./Childcp";
+	const Parent=()=>{
+		let name="react"
+		let handler =()=>{
+    				console.log(name);
+			}
+	return(
+		<div>
+            		<Child h={handle}/>
+        	</div>
+    )
+}
+
+export default Parent
+}
+
+child.js
+
+	const Child =(props)=>{
+    return(
+        <div >
+            <h1>{props.name}</h1>
+            <button onClick={()=>props.h>click here</button>
+        </div>
+    )
+}
+
+export default Child
+
+
+		Class Component
+
+parent.js
+	import React from "react"
+	import Child from './Child.js'
+	class Parent extends React.Component{
+		render(){
+		    let name="react"
+		let handler =()=>{
+    				console.log(name);
+			}
+		return(
+		<div>
+            		<Child h={handle}/>
+        	</div>
+    )
+  }
+}
+export defult Parent
+
+Child.js
+
+ class Child from extends Component{
+	render(){
+	    return(
+        <div >
+            <h1>{this.props.name}</h1>
+            <button onClick={()=>this.props.h>click here</button>
+        </div>
+    )	
+	}
+}
+export default Child
+
+
+30. How we can pass props from Parent to Child?
+
+	Functional Component:
+
+  parent.js
+	import Child from './Child.js'
+	Const Parent =()=>{
+		let s="redux"
+	return(
+		<div>
+		    <Child name={s}/>
+		</div>
+	     )
+        }
+	export default Parent
+
+  child.js
+	const Child=(props)=>{
+		return(
+			<div>
+			<h1>{props.name}</h1>
+			</div>
+		   )	
+	}
+	export default Child
+
+           Class Component 
+
+  parent.js
+	import Child from './Child.js'
+	class parent extends Component {
+		render(){
+			let s="redux"
+		   return(
+			<div>
+			<Child name={s}/>
+			</div>
+			)
+	}
+}
+export default Parent
+
+child.js
+
+	class Child extends Component {
+		render(){
+		  return(
+			<div>
+			<h1>{this.props.name}</h1>
+			</div>
+		   )
+	}
+}
+export default Child
